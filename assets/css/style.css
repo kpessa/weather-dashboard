@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(52,58,64);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.form-label {
+  font-weight: 700;
+  display: block;
+}
+
+.form-control {
+  width: 150px;
+  display: inline-block;
+}
+
+#sidebar {
+  margin-left: 10px;
+  margin-right: 10px;
+}
