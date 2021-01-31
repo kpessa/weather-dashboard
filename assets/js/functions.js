@@ -3,7 +3,11 @@ const kelvinToFahrenheit = kelvin => ((kelvin - 273.15) * 9) / 5 + 32;
 const getCities = () => {
   var citiesStr = localStorage.getItem('cities');
   var cities;
-  citiesStr ? (cities = JSON.parse(citiesStr)) : (cities = []);
+  if (citiesStr) {
+    cities = JSON.parse(citiesStr);
+  } else {
+    cities = [];
+  }
   return cities;
 };
 
