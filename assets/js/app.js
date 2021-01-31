@@ -53,13 +53,13 @@ const fetchCity = cityName => {
 
   fetch(apiURL)
     .then(response => {
-      console.log(response);
+      // console.log(response);
       response.json().then(data => {
         if (!response.ok) {
           showFailureMessage();
         } else if (response.ok) {
           showSuccessMessage();
-
+          inputCity.val('');
           if (!cities.includes(cityName) && response.ok) {
             cities.unshift(cityName);
             localStorage.setItem('cities', JSON.stringify(cities));
@@ -83,7 +83,7 @@ const fetchCity = cityName => {
 
           fetch(apiURL2).then(response2 => {
             response2.json().then(data2 => {
-              console.log(data2);
+              // console.log(data2);
               $('#uvindex').text(`${data2.current.uvi}`); // Set UV-index
               setUVIndexColor(data2.current.uvi);
 

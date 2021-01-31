@@ -35,6 +35,10 @@ table {
   width: 100%;
 }
 
+tbody {
+  cursor: pointer;
+}
+
 #fiveDay {
   display: flex;
   flex-wrap: wrap;
