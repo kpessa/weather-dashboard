@@ -70,6 +70,15 @@ button {
   display: flex;
 }
 
+#alert {
+  padding: 5px;
+  display:none;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
 #sidebar {
   margin-left: 10px;
   background-color:lightgrey;

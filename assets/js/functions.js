@@ -19,3 +19,15 @@ const setSideBarCities = () => {
     $('#recentCities').append(tr);
   }
 };
+
+// !  -----------------------
+// ! Show Success Message
+// ! ------------------------
+const showSuccessMessage = () => {
+  $('#alert').fadeIn();
+  $('#alert').slideDown(700);
+  setTimeout(() => {
+    $('#alert').fadeOut();
+    $('#alert').slideUp(700);
+  }, 1500);
+};

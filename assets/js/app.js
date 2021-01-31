@@ -54,6 +54,9 @@ const fetchCity = cityName => {
     .then(response => {
       console.log(response);
       response.json().then(data => {
+        if (response.ok) {
+          showSuccessMessage();
+        }
         if (!response.ok) throw "Didn't get response";
         if (!cities.includes(cityName) && response.ok) {
           cities.unshift(cityName);
