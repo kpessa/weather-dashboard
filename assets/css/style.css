@@ -70,13 +70,10 @@ button {
   display: flex;
 }
 
-#alert {
-  padding: 5px;
-  display:none;
-}
-
 .alert {
   margin-bottom: 0;
+  padding: 5px;
+  display:none;
 }
 
 #sidebar {
@@ -87,6 +84,10 @@ button {
 
 #city {
   display: inline;
+}
+
+#uvindex {
+  padding: 5px;
 }
 
 .cityContainer {
