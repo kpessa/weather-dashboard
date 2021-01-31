@@ -1,6 +1,3 @@
-var form = $('form');
-var inputCity = $('input');
-
 let cities = getCities();
 
 setSideBarCities();
@@ -18,7 +15,7 @@ const fetchCity = cityName => {
           showFailureMessage();
         } else if (response.ok) {
           showSuccessMessage();
-          inputCity.val('');
+          $('input').val('');
           if (!cities.includes(cityName) && response.ok) {
             cities.unshift(cityName);
             localStorage.setItem('cities', JSON.stringify(cities));
@@ -84,11 +81,11 @@ const fetchCity = cityName => {
 function submitHandler(event) {
   event.preventDefault();
 
-  var cityName = inputCity.val();
+  var cityName = $('input').val();
 
   if (cityName) {
     fetchCity(cityName);
-    inputCity.value = '';
+    $('input').value = '';
   }
 }
 
